@@ -3,26 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@450&display=swap" rel="stylesheet">
     <title>Header</title>
 </head>
 <style>
     body {
         margin: 0;
-    }
-    header {
-        background-color: #21C08B;
-        width: 100%;
-        height: 100px;
+        background-color: #AB88FF;
+        font-family: 'Rubik', sans-serif;
 
     }
-    header img {
+    .header {
+        background-color: #AB88FF;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header__img {
         width: 200px;
         margin: 20px;
     }
+    .header__menu {
+        margin-right: 30px;
+    }
+    .header__menu ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+        margin: auto;    
+        }
+    .header__menu:hover ul, ul:hover {
+        display: block;
+    }
+    .header__menu li {
+        margin: 10px 0px;
+    }
+    .header__menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    .header__menu li a:hover {
+        text-decoration: underline;
+    }
+    .header__menu--profile {
+        margin: 5px ;
+        display: flex;
+        align-items: right;
+
+    }
+    .header__menu--profile image {
+        margin-right: 8px;
+        width: 40px;
+    }
+    .header__menu--profile p {
+        margin:10px;
+        color: white;
+        font-size: 22px;
+    }
 </style>
 <body>
-    <header>
-        <img src="logo-platzi-video-BW2.png" alt="Logo de platzi video">
+    <header class="header">
+        <img class="header__img" src="logo-platzi-video-BW2.png" alt="Logo de platzi video">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="78-02-02.png" alt="IMG de perfil">
+                <p> Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar sesión</a></li>
+            </ul>
+        </div>
     </header>
 </body>
 </html>
